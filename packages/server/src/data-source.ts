@@ -17,5 +17,6 @@ export const dataSource = new DataSource({
     logging: ["error", "warn", "info"],
     maxQueryExecutionTime: 500,
     ssl,
+    migrationsRun: true,
     migrations: [__dirname + "/migrations/*.{ts,js}"],
 });

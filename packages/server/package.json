@@ -10,6 +10,7 @@
         "clean": "rimraf dist",
         "dev": "nodemon src/index.ts",
         "build": "npm run clean && tsc",
+        "migration": "typeorm-ts-node-commonjs migration:run -d src/data-source.ts",
         "format:script": "prettier --write .",
         "lint:script": "eslint --fix",
         "typecheck:script": "tsc --noEmit"
