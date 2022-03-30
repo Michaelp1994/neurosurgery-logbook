@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "clean": "lerna run clean",
-    "dev": "lerna run dev",
+    "dev": "kill-port 3000 4000 && lerna run dev --stream --parallel",
     "build": "lerna run build",
     "graphql:script": "graphql-codegen --watch",
     "migration": "lerna run migration"
@@ -19,14 +19,14 @@
   ],
   "devDependencies": {
     "@graphql-codegen/cli": "^2.6.1",
+    "@graphql-codegen/import-types-preset": "^2.1.14",
     "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/near-operation-file-preset": "^2.2.8",
     "@graphql-codegen/typescript": "^2.4.3",
     "@graphql-codegen/typescript-operations": "^2.2.2",
+    "@graphql-codegen/typescript-urql": "^3.5.3",
     "@graphql-codegen/typescript-vue-urql": "^2.2.2",
     "@graphql-eslint/eslint-plugin": "^3.8.0",
-    "@graphql-codegen/import-types-preset": "^2.1.14",
-    "@graphql-codegen/near-operation-file-preset": "^2.2.8",
-    "@graphql-codegen/typescript-urql": "^3.5.3",
     "@nativescript/eslint-plugin": "^0.0.4",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
@@ -43,6 +43,7 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "kill-port": "^1.6.1",
     "rimraf": "^3.0.2"
   }
 }

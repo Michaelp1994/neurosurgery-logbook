@@ -6,10 +6,12 @@
 
   import TotalConsults from "@/components/widgets/TotalConsults.vue";
   import CurrentRotation from "../../components/widgets/CurrentRotation.vue";
+  import ReloadPrompt from "@/components/ReloadPrompt.vue";
 </script>
 
 <template>
   <q-page padding>
+    <ReloadPrompt />
     <div class="row items-stretch justify-center">
       <div class="col-xs-12 col-sm-6 col-lg-4 q-pa-sm">
         <TotalConsults />

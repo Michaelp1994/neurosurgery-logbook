@@ -23,6 +23,9 @@ export default defineConfig({
         "robots.txt",
         "apple-touch-icon.png",
       ],
+      devOptions: {
+        enabled: true,
+      },
       manifest: {
         name: "Neurosurgery Logbook",
         short_name: "Logbook",
