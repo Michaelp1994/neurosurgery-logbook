@@ -1,1 +1,0 @@
-{"version":3,"file":"UserRole.js","sourceRoot":"","sources":["../../src/enums/UserRole.ts"],"names":[],"mappings":";;;AAAA,+CAAgD;AAEhD,IAAY,QAGX;AAHD,WAAY,QAAQ;IAChB,uCAAI,CAAA;IACJ,yCAAK,CAAA;AACT,CAAC,EAHW,QAAQ,GAAR,gBAAQ,KAAR,gBAAQ,QAGnB;AAED,IAAA,+BAAgB,EAAC,QAAQ,EAAE;IACvB,IAAI,EAAE,UAAU;IAChB,WAAW,EAAE,iCAAiC,EAAE,uBAAuB;CAC1E,CAAC,CAAC"}
