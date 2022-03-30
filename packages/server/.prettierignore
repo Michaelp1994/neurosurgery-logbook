@@ -1,0 +1,10 @@
+.env
+node_modules
+generated
+dist
+public
+.vscode
+.dockerignore
+.env
+.gitignore
+Dockerfile

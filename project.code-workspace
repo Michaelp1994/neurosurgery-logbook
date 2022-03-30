@@ -1,0 +1,64 @@
+{
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": "./"
+    },
+    {
+      "name": "web",
+      "path": "./packages/web"
+    },
+    {
+      "name": "server",
+      "path": "./packages/server"
+    }
+    // {
+    //   "name": "mobile",
+    //   "path": "./mobile"
+    // }
+  ],
+  "settings": {
+    //VS CODE
+    "files.exclude": {
+      // "node_modules/": true,
+      // "web/": true,
+      // "server/": true,
+      // "mobile/": true
+    },
+    "files.eol": "\n",
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+
+    // PRETTIER
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "editor.formatOnSave": true,
+
+    // Tailwind CSS
+    "css.validate": false,
+    "tailwindCSS.includeLanguages": {
+      "vue": "html",
+      "vue-html": "html"
+    },
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+
+    // ESLINT
+    "eslint.lintTask.enable": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue",
+      "json",
+      "typescript",
+      "typescriptreact",
+      "graphql"
+    ],
+
+    // JEST
+    "jest.autoRun": "off",
+    "files.trimFinalNewlines": true
+  }
+}

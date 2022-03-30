@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    container_name: postgres
+    image: "postgres"
+    environment:
+      POSTGRES_USER: michael
+      POSTGRES_DB: development_db
+      POSTGRES_PASSWORD: 3JZyjDGn2BisuYd
+    ports:
+      - 5432:5432
+    volumes:
+      - ./database/db_data:/var/lib/postgresql/data

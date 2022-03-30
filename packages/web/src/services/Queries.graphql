@@ -1,0 +1,424 @@
+query AllConsults {
+  allConsults {
+    id
+    name
+    procedureDate
+    hospital {
+      id
+      name
+    }
+    isCompleted
+    urn
+  }
+}
+
+query AllProcedures {
+  allProcedures {
+    id
+    name
+    type {
+      id
+      name
+    }
+  }
+}
+
+query AllProcedureTypes {
+  allProcedureTypes {
+    id
+    name
+  }
+}
+
+query Search($input: SearchInput!) {
+  search(input: $input) {
+    ... on Consult {
+      id
+      name
+      urn
+    }
+  }
+}
+
+query AllRotations {
+  allRotations {
+    id
+    name
+    startDate
+    endDate
+    setLevel {
+      id
+      name
+    }
+    hospital {
+      id
+      name
+      urnMask
+    }
+    supervisors {
+      id
+      name
+    }
+  }
+}
+
+query Procedure($input: ProcedureInput!) {
+  procedure(input: $input) {
+    id
+    name
+    type {
+      id
+      name
+    }
+  }
+}
+
+query Consult($input: ConsultInput!) {
+  consult(input: $input) {
+    id
+    name
+    urn
+    userId
+    hospitalId
+    supervisorId
+    setLevelId
+    admissionCategoryId
+    ethnicityId
+    unplannedReadmissionId
+    fundingTypeId
+    asaGradeId
+    woundInfectionRiskId
+    typeOfAnaestheticId
+    unplannedIcuId
+    returnToTheatreId
+    outcomeId
+    mortalityClassificationId
+    rotationPeriod {
+      id
+      name
+    }
+    setLevel {
+      id
+      name
+    }
+    procedureDate
+    hospital {
+      id
+      name
+    }
+    supervisor {
+      id
+      name
+    }
+    user {
+      id
+      firstName
+      lastName
+    }
+    startTime
+    endTime
+    gender
+    admissionDate
+    dateOfBirth
+    patientAge
+    procedureDuration {
+      hours
+      minutes
+    }
+    admissionCategory {
+      id
+      name
+    }
+    ethnicity {
+      id
+      name
+    }
+    unplannedReadmission {
+      id
+      name
+    }
+    fundingType {
+      id
+      name
+    }
+    asaGrade {
+      id
+      name
+    }
+    woundInfectionRisk {
+      id
+      name
+    }
+    typeOfAnaesthetic {
+      id
+      name
+    }
+    unplannedIcu {
+      id
+      name
+    }
+    returnToTheatre {
+      id
+      name
+    }
+    outcome {
+      id
+      name
+    }
+    mortalityClassification {
+      id
+      name
+    }
+    diagnosisDate
+    preManagementDiagnosis
+    recognisedCoMorbidities
+
+    prophylaxis
+    finalDiagnosis
+    pathologicalDiagnoses
+
+    isCompleted
+
+    dischargeDate
+
+    recurrenceDate
+    discussedAtMdm
+    comments
+
+    createdAt
+    updatedAt
+    deletedAt
+    procedures {
+      id
+      supervisionLevel {
+        id
+        name
+      }
+      procedure {
+        id
+        name
+        type {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+query AllUsers {
+  allUsers {
+    email
+    firstName
+    id
+    lastName
+    role
+  }
+}
+
+query Profile {
+  profile {
+    email
+    firstName
+    id
+    lastName
+    role
+  }
+}
+
+query AllSupervisors {
+  allSupervisors {
+    id
+    name
+  }
+}
+
+query Supervisor($input: SupervisorInput!) {
+  supervisor(input: $input) {
+    id
+    name
+  }
+}
+
+query Rotation($input: RotationInput!) {
+  rotation(input: $input) {
+    id
+    name
+    startDate
+    endDate
+    setLevel {
+      id
+      name
+    }
+    hospitalId
+    hospital {
+      id
+      name
+      urnMask
+    }
+    supervisors {
+      id
+      name
+    }
+  }
+}
+query AllHospitals {
+  allHospitals {
+    id
+    name
+    urnMask
+  }
+}
+
+query Hospital($input: HospitalInput!) {
+  hospital(input: $input) {
+    id
+    name
+    urnMask
+  }
+}
+
+query CurrentRotation {
+  currentRotation {
+    id
+    name
+    startDate
+    endDate
+    setLevel {
+      id
+      name
+    }
+    hospital {
+      id
+      name
+    }
+  }
+}
+
+query AllAdmissionCategories {
+  allAdmissionCategories {
+    id
+    name
+  }
+}
+query AllEthnicities {
+  allEthnicities {
+    id
+    name
+  }
+}
+
+query AllSupervisionLevels {
+  allSupervisionLevels {
+    id
+    name
+  }
+}
+query AllUnplannedReadmissions {
+  allUnplannedReadmissions {
+    id
+    name
+  }
+}
+query AllFundingTypes {
+  allFundingTypes {
+    id
+    name
+  }
+}
+query AllSetLevels {
+  allSetLevels {
+    id
+    name
+  }
+}
+query AllAsaGrades {
+  allAsaGrades {
+    id
+    name
+  }
+}
+query AllWoundInfectionRisks {
+  allWoundInfectionRisks {
+    id
+    name
+  }
+}
+query AllTypeOfAnaesthetics {
+  allTypeOfAnaesthetics {
+    id
+    name
+  }
+}
+query AllUnplannedIcus {
+  allUnplannedIcus {
+    id
+    name
+  }
+}
+query AllReturnToTheatres {
+  allReturnToTheatres {
+    id
+    name
+  }
+}
+query AllOutcomes {
+  allOutcomes {
+    id
+    name
+  }
+}
+query AllMortalityClassifications {
+  allMortalityClassifications {
+    id
+    name
+  }
+}
+
+query FundingTypeStatistics {
+  allFundingTypes {
+    id
+    name
+    totalConsults
+  }
+}
+
+query SupervisionLevelStatistics {
+  allSupervisionLevels {
+    id
+    name
+    totalConsults
+  }
+}
+
+query ProcedureTopicStatistics {
+  allProcedureTopics {
+    id
+    name
+    shortName
+    totalConsults
+  }
+}
+
+query ProcedureTypeStatistics {
+  allProcedureTypes {
+    id
+    name
+    totalConsults
+  }
+}
+
+query TotalConsults {
+  totalConsults
+}
+
+query ProcedureLogbook {
+  allProcedures {
+    id
+    name
+    totalConsults
+    totalPrimaryConsults
+    totalSecondaryConsults
+    totalAssistantConsults
+  }
+}

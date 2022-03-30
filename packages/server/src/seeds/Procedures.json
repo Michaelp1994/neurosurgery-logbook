@@ -1,0 +1,798 @@
+[
+    {
+        "name": "Aneurysm - Clipping: Anterior circulation",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Aneurysm - Clipping: Posterior circulation",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "AVM Excision",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Carotid Endarterectomy",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Carotid Trapping",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Cavernoma Excision",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "EC-IC Bypass/EDAS/Surgery for Moya Moya",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Endovascular Procedure",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Intracerebral Haemorrhage - Evacuation",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 1
+    },
+    {
+        "name": "Posterior Decompression/Chiari Decompression",
+        "procedureTypeId": 2
+    },
+    {
+        "name": "Trans-Oral Procedure",
+        "procedureTypeId": 2
+    },
+    {
+        "name": "Tumour Excision",
+        "procedureTypeId": 2
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 2
+    },
+    {
+        "name": "Corpus Callosum Section",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Corticectomy",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Electrode Insertion",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Hemispherectomy",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Lesionectomy",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Lobectomy",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Vagal Nerve Stimulator",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 3
+    },
+    {
+        "name": "Endoscopic Third Ventriculostomy",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Lumbo-Peritoneal Shunt",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Other Endoscopic Procedures",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Removal of Infected Shunt",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Revision of Shunt",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Ventriculo-Atrial Shunt",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Ventriculo-Peritoneal Shunt",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Ventriculo-Pleural Shunt",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 4
+    },
+    {
+        "name": "Cerebral Abscess - Aspiration",
+        "procedureTypeId": 5
+    },
+    {
+        "name": "Cerebral Abscess - Excision",
+        "procedureTypeId": 5
+    },
+    {
+        "name": "Subdural Empyema",
+        "procedureTypeId": 5
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 5
+    },
+    {
+        "name": "Debridement/Washout of Wound",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Evacuation of Post Operative Haematoma",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "External Ventricular Drain",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Foreign Body",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Insertion of Ommaya/Rickham Reservoir",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Intracranial Pressure Monitoring",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Meningeal Biopsy",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Muscle Biopsy",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Tracheostomy",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 6
+    },
+    {
+        "name": "Cordotomy",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "DREZ Lesions",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Microvascular Decompression Other Cranial Nerves",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Opiate/Baclofen Infusion Pump",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Spinal Cord Stimulator",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Spinal Rhizotomy",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Trigeminal Microvascular Decompression",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Trigeminal Percutaneous Rhizotomy (Balloon/RF)",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 7
+    },
+    {
+        "name": "Brachial Plexus Exploration",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Carpal Tunnel",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Cervical Rib/Thoracic Outlet",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Nerve Repair",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Neurectomy",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Peripheral Nerve Stimulator",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Sural Nerve Biopsy",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Sympathectomy",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Ulnar Neurolysis",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 8
+    },
+    {
+        "name": "Disc Arthroplasty",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Epidural Abscess",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Epidural Haematoma",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Extradural Tumour",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Intervertebral Disc: Discectomy - Cervical",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Intervertebral Disc: Discectomy - Lumbar",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Intervertebral Disc: Discectomy - Thoracic",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Intradural Extramedullary Tumour",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Intramedullary Tumour",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Laminectomy/Laminoplasty for Canal Stenosis -",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Cervical",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Laminectomy/Laminoplasty for Canal Stenosis -",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Lumbar",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Laminectomy/Laminoplasty for Canal Stenosis -",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Thoracic",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Occipito-cervical Fusion",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Posterior Cervical Foraminotomy",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Spinal AVM",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Spinal Fusion: ACDF +/- Plate",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Spinal Fusion: Anterior Thoracic Fusion",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Spinal Fusion: Anterior Lumbar Fusion",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Spinal Fusion: Posterior - Instrumented",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Spinal Fusion: Posterior - Non-instrumented",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Syrinx - Shunt Procedure",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Tethered Spinal Cord",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Vertebrectomy",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 9
+    },
+    {
+        "name": "Deep Brain Stimulator",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Needle Biopsy - Frame Based",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Needle Biopsy - Frameless",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Pallidotomy",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Radiosurgery",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Thalamotomy",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 10
+    },
+    {
+        "name": "Acute Subdural Haematoma",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Chronic Subdural Haematoma - Burr Hole",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Chronic Subdural Haematoma - Craniotomy",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Craniofacial Repair",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Cranioplasty",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Decompressive Craniectomy",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Depressed Fracture of Skull",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Dural Repair",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Extradural Haematoma",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Intracerebral Haematoma/Contusions",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 11
+    },
+    {
+        "name": "Acoustic Neuroma",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Bony Skull Tumour",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Colloid Cyst",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Endoscopic Biopsy",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Glioma: Low grade - Debulking",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Glioma: High grade - Debulking",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Meningioma",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Metastasis",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Pituitary Tumour - Trans-cranial",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Pituitary Tumour - Trans-sphenoidal",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Tumour Excision with Skull Base Approach",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Ventricular Tumour/Cyst",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 12
+    },
+    {
+        "name": "Aneurysm",
+        "procedureTypeId": 13
+    },
+    {
+        "name": "Arteriovenous Malformation",
+        "procedureTypeId": 13
+    },
+    {
+        "name": "Intracerebral Haemorrhage",
+        "procedureTypeId": 13
+    },
+    {
+        "name": "Moya Moya Procedure",
+        "procedureTypeId": 13
+    },
+    {
+        "name": "Surgery for Vein of Galen Malformation",
+        "procedureTypeId": 13
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 13
+    },
+    {
+        "name": "Encephalocele Repair",
+        "procedureTypeId": 14
+    },
+    {
+        "name": "Fronto-orbital Advancement",
+        "procedureTypeId": 14
+    },
+    {
+        "name": "Multiple Suture Craniectomy and Vault",
+        "procedureTypeId": 14
+    },
+    {
+        "name": "Reconstruction",
+        "procedureTypeId": 14
+    },
+    {
+        "name": "Single Suture Craniectomy",
+        "procedureTypeId": 14
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 14
+    },
+    {
+        "name": "Corpus Callosotomy",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Corticectomy",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Electrocorticography",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Hemispherectomy",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Lesionectomy",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Temporal Lobectomy",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Vagal Nerve Stimulator",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 15
+    },
+    {
+        "name": "Lumbo-Peritoneal Shunt",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Removal of Infected Shunt",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Revision of Shunt",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Ventriculo-Atrial Shunt",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Ventriculo-Peritoneal Shunt",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Ventriculo-Pleural Shunt",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 16
+    },
+    {
+        "name": "Anterior Fontanelle Dermoid",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Arachnoid Cyst Fenestration",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Debridement/Washout of Wound",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Evacuation of Post Operative Haematoma",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "External Ventricular Drain",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Foreign Body",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Insertion of Ventricular Rickham Reservoir",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Intracranial Pressure Monitoring",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 17
+    },
+    {
+        "name": "Endoscopic Shunt Placement",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Exploration",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Fenestration of Cyst",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Septostomy (Septum Pellucidum)",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Third Ventriculostomy",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Tumour Biopsy",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 18
+    },
+    {
+        "name": "Biopsy",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Chiari Decompression",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Dermoid",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Diastematomyelia",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Lipomyelomeningocele",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Myelominingocele Repair",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Selective Dorsal Rhizotomy",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Syrinx Procedure",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Tethered Cord",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 19
+    },
+    {
+        "name": "Acute Subdural Haematoma",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Cranioplasty",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Decompressive Craniectomy",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Depressed Skull Fracture",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Dural Repair",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Extradural Haematoma",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Intracerebral Haematoma/Contusions",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Other Extra-Axial Fluid Collection",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 20
+    },
+    {
+        "name": "Bony Skull Tumour",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Craniopharyngioma",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Diencephalic/Optic Glioma",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Needle Biospy of Brain",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Pineal",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Posterior Fossa - Ependymoma",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Posterior Fossa - Medulloblastoma",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Posterior Fossa - Pilocytic Astrocytoma",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Posterior Fossa - Other",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Supratentorial - Low Grade Glioma (WHO I/II)",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Supratentorial - High Grade Glioma (WHO III/IV)",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Supratentorial - Other",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Supratentorial - Pilocytic Astrocytoma",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Supratentorial - PNET",
+        "procedureTypeId": 21
+    },
+    {
+        "name": "Other",
+        "procedureTypeId": 21
+    }
+]

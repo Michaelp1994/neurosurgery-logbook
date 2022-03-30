@@ -1,0 +1,8 @@
+{
+    "watch": ["src/**/*.ts"],
+    "ignore": ["src/**/*.spec.ts"],
+    "exec": "ts-node .",
+    "events": {
+        "start": "node -e console.clear()"
+    }
+}

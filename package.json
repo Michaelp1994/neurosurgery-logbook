@@ -1,0 +1,47 @@
+{
+  "name": "neurosurgery_logbook",
+  "version": "1.0.0",
+  "description": "Monorepo for Neurosurgery Logbook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "clean": "lerna run clean",
+    "dev": "lerna run dev",
+    "build": "lerna run build",
+    "graphql:script": "graphql-codegen --watch"
+  },
+  "author": "Michael Poulgrain",
+  "license": "ISC",
+  "workspaces": [
+    "packages/web",
+    "packages/server"
+  ],
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.6.1",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "^2.4.3",
+    "@graphql-codegen/typescript-operations": "^2.2.2",
+    "@graphql-codegen/typescript-vue-urql": "^2.2.2",
+    "@graphql-eslint/eslint-plugin": "^3.8.0",
+    "@graphql-codegen/import-types-preset": "^2.1.14",
+    "@graphql-codegen/near-operation-file-preset": "^2.2.8",
+    "@graphql-codegen/typescript-urql": "^3.5.3",
+    "@nativescript/eslint-plugin": "^0.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "lerna": "^4.0.0",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
