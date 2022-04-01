@@ -1,0 +1,24 @@
+{
+  "name": "neurosurgery_logbook_mobile",
+  "main": "app/app.ts",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@nativescript/camera": "^5.0.10",
+    "@nativescript/core": "~8.1.1",
+    "@nativescript/mlkit-core": "^1.0.0-alpha.0",
+    "@nativescript/mlkit-text-recognition": "^1.0.0-alpha.0",
+    "@nativescript/theme": "~3.0.1",
+    "nativescript-vue": "~2.9.0",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.1.1",
+    "@nativescript/types": "~8.1.1",
+    "@nativescript/webpack": "~5.0.0",
+    "@types/node": "~14.6.2",
+    "nativescript-vue-template-compiler": "~2.9.0",
+    "typescript": "~4.3.5",
+    "vue": "~2.6.12"
+  }
+}

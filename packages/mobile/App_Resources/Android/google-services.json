@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973211798176",
+    "project_id": "neurosurgery-logbook",
+    "storage_bucket": "neurosurgery-logbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973211798176:android:d1e8e3970ba71fab8b57c5",
+        "android_client_info": {
+          "package_name": "org.nativescript.neurosurgerylogbookmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973211798176-1gg25m5hujtja4rl9ptti24ckd2itvbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBZIMaSd6GkmUw3xhdP4aNbZvxH4GlfYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973211798176-1gg25m5hujtja4rl9ptti24ckd2itvbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
