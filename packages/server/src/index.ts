@@ -9,9 +9,11 @@ import { authChecker, contextGenerator } from "./services/authChecker";
 import cors from "cors";
 import { graphqlUploadExpress } from "graphql-upload";
 import { dataSource } from "./data-source";
+import path from "path";
+import { exit } from "process";
 const graphqlPath = "/graphql";
 
-export default async function (STATIC_LOCATION?: string) {
+async function startServer() {
     const PORT = process.env.PORT;
     if (!PORT) throw Error("Port is not properly configured in env variables.");
     const WEBSITE_URL = process.env.WEBSITE_URL;
@@ -20,7 +22,7 @@ export default async function (STATIC_LOCATION?: string) {
     const app = express();
     const httpServer = http.createServer(app);
     const schema = await buildSchema({
-        resolvers: [__dirname + "/resolvers/**/*.{ts,js}"],
+        resolvers: [path.join(__dirname, "resolvers", "**", "*.{ts,js}")],
         authChecker: authChecker,
         emitSchemaFile: {
             path: "./schema.graphql",
@@ -29,10 +31,15 @@ export default async function (STATIC_LOCATION?: string) {
     });
     app.use(cors());
     app.use(graphqlUploadExpress({ maxFileSize: 10000000, maxFiles: 10 }));
-    if (STATIC_LOCATION) {
-        app.use(express.static(STATIC_LOCATION));
+    console.log(process.env.NODE_ENV);
+    if (process.env.NODE_ENV === "production") {
+        app.use(
+            express.static(path.join(__dirname, "..", "..", "web", "dist"))
+        );
         app.get("*", (req, res) => {
-            res.sendFile(STATIC_LOCATION + "/index.html");
+            res.sendFile(
+                path.join(__dirname, "..", "..", "web", "dist", "index.html")
+            );
         });
     }
 
@@ -50,6 +57,7 @@ export default async function (STATIC_LOCATION?: string) {
     console.log(`🚀 Server ready at ${WEBSITE_URL}:${PORT}`);
 }
 
-// startApolloServer().catch((e) => {
-//     console.log("Error:", e);
-// });
+startServer().catch((e) => {
+    console.log("Error:", e);
+    exit(1);
+});

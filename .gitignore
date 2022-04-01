@@ -1,5 +1,7 @@
-node_modules
-database
-.vscode
-references
 .env
+node_modules
+generated
+dist
+.vscode
+database
+references

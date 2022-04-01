@@ -4,7 +4,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite --host",
-    "build": "npm run clean && vite build",
+    "prebuild": "npm run clean",
+    "build": "vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest",
