@@ -1,6 +1,5 @@
 import { FieldResolver, Resolver, ResolverInterface, Root } from "type-graphql";
 import { dataSource } from "../data-source";
-import { Consult } from "../models/Consult";
 import { ConsultProcedure } from "../models/ConsultProcedure";
 import { SupervisionLevel } from "../models/SupervisionLevel";
 const supervisionLevelRepository = dataSource.getRepository(SupervisionLevel);

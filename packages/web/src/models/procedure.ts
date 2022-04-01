@@ -3,8 +3,6 @@ import {
   useProcedureQuery,
 } from "@/services/types.generated";
 
-const initialState = [];
-
 export function getProcedures() {
   const result = useAllProceduresQuery();
   return result;

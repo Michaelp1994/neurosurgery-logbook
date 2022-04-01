@@ -1,4 +1,4 @@
-import { ref, computed, reactive } from "vue";
+import { ref, reactive } from "vue";
 import {
   useRegisterMutation,
   RegisterInput,
@@ -128,14 +128,19 @@ export function useUpdateProfile() {
   const error = ref();
   const fetching = ref(true);
 
-  useProfileQuery().then((result) => {
-    error.value = result.error.value;
-    fetching.value = false;
-    // check for errors etc
-    Object.keys(input).forEach((key) => {
-      input[key] = result.data.value.profile[key];
-    });
-  });
+  useProfileQuery().then(
+    (result) => {
+      error.value = result.error.value;
+      fetching.value = false;
+      // check for errors etc
+      Object.keys(input).forEach((key) => {
+        input[key] = result.data.value.profile[key];
+      });
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   function updateProfile(input: UpdateProfileInput) {
     const result = updateProfileMutation.executeMutation({

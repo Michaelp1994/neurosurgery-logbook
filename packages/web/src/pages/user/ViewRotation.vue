@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { getRotation } from "@/models/rotation";
   import { useRoute } from "vue-router";
-  import { capitalCase } from "change-case";
   import { UserRole } from "@/services/types.generated";
   import { useApplicationStore } from "@/store/Application.store";
 

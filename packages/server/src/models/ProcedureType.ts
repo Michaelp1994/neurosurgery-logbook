@@ -9,14 +9,14 @@ import {
     UpdateDateColumn,
     ManyToOne,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Procedure } from "./Procedure";
 import { ProcedureTopic } from "./ProcedureTopic";
 
 @Entity()
 @ObjectType({ description: "The procedure type model" })
 export class ProcedureType extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

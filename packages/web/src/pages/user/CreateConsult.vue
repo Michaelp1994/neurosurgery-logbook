@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, watchEffect, watch } from "vue";
+  import { ref } from "vue";
   import { useRouter } from "vue-router";
 
   import { QFile, QForm } from "quasar";
@@ -29,7 +29,6 @@
   import UnplannedReadmissionSelect from "@/components/inputs/UnplannedReadmissionSelect.vue";
   import WoundInfectionRiskSelect from "@/components/inputs/WoundInfectionRiskSelect.vue";
   import RotationPeriodSelect from "@/components/inputs/RotationPeriodSelect.vue";
-  import { SupervisionLevel } from "@/services/types.generated";
   import { useApplicationStore } from "@/store/Application.store";
   import { UserRole } from "@/services/types.generated";
   const applicationStore = useApplicationStore();
@@ -44,7 +43,7 @@
   const { input, procedureDuration, patientAge, createConsult, rules } =
     useCreateConsult();
   const { imageUpload } = useImageUpload();
-  const { data, error, fetching } = getRotations();
+  const { data } = getRotations();
   async function procedureSelected(procedureId: number) {
     const consultProcedure = {
       procedureId,

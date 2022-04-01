@@ -8,7 +8,7 @@ import {
     UpdateDateColumn,
     ManyToOne,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Consult } from "./Consult";
 import { Procedure } from "./Procedure";
 import { SupervisionLevel } from "./SupervisionLevel";
@@ -18,7 +18,7 @@ import { SupervisionLevel } from "./SupervisionLevel";
     description: "The many-to-many relation between Consult & Procedure",
 })
 export class ConsultProcedure extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     id!: number;
 

@@ -1,11 +1,7 @@
 import { UserRole } from "../enums/UserRole";
 import type { AuthChecker } from "type-graphql";
 import { ReturnContext, BaseContextType, DecodedToken } from "../types";
-import {
-    AuthenticationError,
-    ContextFunction,
-    ForbiddenError,
-} from "apollo-server-core";
+import { ContextFunction, ForbiddenError } from "apollo-server-core";
 import jwt, { TokenExpiredError } from "jsonwebtoken";
 
 const JWT_SECRET = process.env.JWT_SECRET;

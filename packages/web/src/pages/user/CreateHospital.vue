@@ -1,10 +1,8 @@
 <script setup lang="ts">
   import { useCreateHospital } from "@/models/hospital";
-  import { ref } from "vue";
   import { useRouter } from "vue-router";
   import UrnMaskHelperTable from "@/components/UrnMaskHelperTable.vue";
   const router = useRouter();
-  const loading = ref(false);
   const { input, createHospital, rules } = useCreateHospital();
 
   async function submit() {

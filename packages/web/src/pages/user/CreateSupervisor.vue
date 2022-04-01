@@ -1,9 +1,7 @@
 <script setup lang="ts">
   import { useCreateSupervisor } from "@/models/supervisor";
-  import { ref, watchEffect } from "vue";
   import { useRouter } from "vue-router";
   const router = useRouter();
-  const loading = ref(false);
   const { input, createSupervisor, rules } = useCreateSupervisor();
   async function submit() {
     const { data, error } = await createSupervisor(input);

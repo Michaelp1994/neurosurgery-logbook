@@ -6,7 +6,7 @@
   // const options = {
   //   labels: ["Private", "Public"],
   // };
-  const { data, error, fetching } = useFundingTypeStatisticsQuery();
+  const { data, fetching } = useFundingTypeStatisticsQuery();
   const series = computed(() =>
     data.value?.allFundingTypes.map((fundingType) => fundingType.totalConsults)
   );

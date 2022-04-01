@@ -8,7 +8,7 @@ import {
     DeleteDateColumn,
     UpdateDateColumn,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Consult } from "./Consult";
 import bcrypt from "bcrypt";
 import { UserRole } from "../enums/UserRole";
@@ -21,7 +21,7 @@ import { Supervisor } from "./Supervisor";
 @Entity()
 @ObjectType({ description: "The user model" })
 export class User extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 
@@ -115,7 +115,7 @@ export class User extends BaseEntity {
 
 @ObjectType({ description: "User login authentication model" })
 export class Token {
-    @Field()
+    @Field(() => ID)
     id!: number;
 
     @Field(() => String)

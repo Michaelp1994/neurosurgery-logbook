@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { useTotalConsultsQuery } from "@/services/types.generated";
 
-  const { data, error, fetching } = useTotalConsultsQuery();
+  const { data } = useTotalConsultsQuery();
 </script>
 <template>
   <q-card class="bg-primary">

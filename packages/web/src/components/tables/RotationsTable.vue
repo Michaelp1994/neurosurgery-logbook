@@ -4,7 +4,6 @@
   import { DateTime } from "luxon";
   // const fetching = ref(true);
   // const error = ref(false);
-  import { capitalCase } from "change-case";
   const columns: QTableProps["columns"] = [
     {
       name: "name",

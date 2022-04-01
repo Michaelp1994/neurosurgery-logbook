@@ -8,13 +8,13 @@ import {
     UpdateDateColumn,
     OneToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { ConsultProcedure } from "./ConsultProcedure";
 
 @Entity()
 @ObjectType({ description: "The Supervision Level model" })
 export class SupervisionLevel extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

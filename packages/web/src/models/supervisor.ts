@@ -51,14 +51,19 @@ export function useUpdateSupervisor(id: number) {
 
   useSupervisorQuery({
     variables: { input: { id } },
-  }).then((result) => {
-    error.value = result.error.value;
-    fetching.value = false;
-    // check for errors etc
-    Object.keys(input).forEach((key) => {
-      input[key] = result.data.value?.supervisor[key];
-    });
-  });
+  }).then(
+    (result) => {
+      error.value = result.error.value;
+      fetching.value = false;
+      // check for errors etc
+      Object.keys(input).forEach((key) => {
+        input[key] = result.data.value?.supervisor[key];
+      });
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   function updateSupervisor(input: UpdateSupervisorInput) {
     const result = updateSupervisorMutation.executeMutation({

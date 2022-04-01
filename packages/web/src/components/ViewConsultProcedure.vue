@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ConsultQuery } from "@/services/types.generated";
-  const props = defineProps<{
+  defineProps<{
     modelValue?: ConsultQuery["consult"]["procedures"];
   }>();
 </script>

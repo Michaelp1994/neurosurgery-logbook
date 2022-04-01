@@ -10,7 +10,7 @@ import {
     OneToMany,
     ManyToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { User } from "./User";
 import { Consult } from "./Consult";
 import { Rotation } from "./Rotation";
@@ -18,7 +18,7 @@ import { Rotation } from "./Rotation";
 @Entity()
 @ObjectType({ description: "The supervisor model" })
 export class Supervisor extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

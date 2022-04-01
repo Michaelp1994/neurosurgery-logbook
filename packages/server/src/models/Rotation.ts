@@ -11,7 +11,7 @@ import {
     ManyToOne,
     OneToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Supervisor } from "./Supervisor";
 import { Hospital } from "./Hospital";
 import { User } from "./User";
@@ -21,7 +21,7 @@ import { SetLevel } from "./SetLevel";
 @Entity()
 @ObjectType({ description: "The rotation model" })
 export class Rotation extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

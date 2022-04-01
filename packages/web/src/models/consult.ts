@@ -12,7 +12,7 @@ import {
 } from "@/services/types.generated";
 import { useApplicationStore } from "@/store/Application.store";
 
-const initialState: CreateConsultInput = {
+const initialState = {
   name: "",
   urn: "",
   selectedProcedures: [],
@@ -141,26 +141,31 @@ export function useUpdateConsult(id: number) {
 
   useConsultQuery({
     variables: { input: { id } },
-  }).then((result) => {
-    error.value = result.error.value;
-    fetching.value = false;
-    // check for errors etc
-    if (!result.data.value) throw Error();
-    Object.keys(input).forEach((key) => {
-      input[key] = result.data.value.consult[key];
-    });
+  }).then(
+    (result) => {
+      error.value = result.error.value;
+      fetching.value = false;
+      // check for errors etc
+      if (!result.data.value) throw Error();
+      Object.keys(input).forEach((key) => {
+        input[key] = result.data.value.consult[key];
+      });
 
-    input.id = id;
-    input.rotationPeriodId = result.data.value.consult.rotationPeriod.id;
-    input.selectedProcedures = result.data.value.consult.procedures.map(
-      (procedure) => {
-        return {
-          procedureId: procedure.procedure.id,
-          supervisionLevel: procedure.supervisionLevel,
-        };
-      }
-    );
-  });
+      input.id = id;
+      input.rotationPeriodId = result.data.value.consult.rotationPeriod.id;
+      input.selectedProcedures = result.data.value.consult.procedures.map(
+        (procedure) => {
+          return {
+            procedureId: procedure.procedure.id,
+            supervisionLevel: procedure.supervisionLevel,
+          };
+        }
+      );
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   function updateConsult(input: UpdateConsultInput) {
     const result = updateConsultMutation.executeMutation({

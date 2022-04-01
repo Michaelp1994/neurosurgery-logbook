@@ -1,15 +1,19 @@
 <script setup lang="ts">
   import { getRotations } from "@/models/rotation";
 
-  const props = defineProps(["modelValue"]);
-  const emits = defineEmits(["update:modelValue"]);
+  const props = defineProps<{
+    modelValue: number;
+  }>();
+  const emit = defineEmits<{
+    (e: "update:modelValue", id: number): void;
+  }>();
 
-  const { data, error, fetching } = getRotations();
+  const { data, fetching } = getRotations();
 </script>
 
 <template>
   <q-select
-    :model-value="modelValue"
+    :model-value="props.modelValue"
     :loading="fetching"
     outlined
     option-value="id"
@@ -17,7 +21,7 @@
     emit-value
     map-options
     :options="data?.allRotations"
-    @update:model-value="(newValue) => $emit('update:modelValue', newValue)"
+    @update:model-value="(newValue) => emit('update:modelValue', newValue)"
   />
 </template>
 <style scoped></style>

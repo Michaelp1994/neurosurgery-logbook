@@ -9,7 +9,7 @@ import {
     DeleteDateColumn,
     OneToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { User } from "./User";
 import { ConsultProcedure } from "./ConsultProcedure";
 import { LocalTimeResolver } from "graphql-scalars";
@@ -45,7 +45,7 @@ export class CaseDuration extends BaseEntity {
 export class Consult extends BaseEntity {
     //Minimum dataset
 
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 
@@ -346,36 +346,4 @@ export class RecognisedText {
 
     @Field({ nullable: true })
     dateOfBirth?: string;
-}
-
-@ObjectType({ description: "OCR Result for Patient Label" })
-export class Statistics {
-    @Field({ nullable: true })
-    totalConsults: number;
-    @Field({ nullable: true })
-    spinal: number;
-
-    @Field({ nullable: true })
-    cranial: number;
-
-    @Field({ nullable: true })
-    peripheralNerveSurgery: number;
-
-    @Field({ nullable: true })
-    primary: number;
-
-    @Field({ nullable: true })
-    secondary: number;
-
-    @Field({ nullable: true })
-    assistant: number;
-
-    @Field({ nullable: true })
-    publicFunded: number;
-
-    @Field({ nullable: true })
-    privateFunded: number;
-
-    @Field(() => [Number], { nullable: true })
-    procedureTypeArray: number[];
 }

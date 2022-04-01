@@ -1,4 +1,3 @@
-, ref
 <script setup lang="ts">
   import { ref } from "vue";
   import { useRouter, useRoute } from "vue-router";
@@ -44,10 +43,6 @@
   async function procedureSelected(procedureId: number) {
     const consultProcedure = { procedureId, supervisionLevel: "" };
     input.selectedProcedures.push(consultProcedure);
-  }
-
-  async function markComplete() {
-    input.isCompleted = true;
   }
 
   async function saveAndClose() {

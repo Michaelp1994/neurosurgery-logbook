@@ -18,10 +18,6 @@ module.exports = {
 
   overrides: [
     {
-      files: ["*.json"],
-      extends: ["plugin:json/recommended"],
-    },
-    {
       files: ["*.ts", "*.tsx"],
       excludedFiles: ["**/*.generated.ts", "**/*.config.ts"],
       env: {
@@ -35,6 +31,19 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
       ],
+      rules: {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            selector: "property",
+            format: ["strictCamelCase"],
+          },
+          {
+            selector: "class",
+            format: ["StrictPascalCase"],
+          },
+        ],
+      },
       parserOptions: {
         tsconfigRootDir: __dirname,
         project: ["./tsconfig.json"],

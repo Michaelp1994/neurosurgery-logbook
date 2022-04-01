@@ -8,15 +8,15 @@
     "clean": "lerna run clean",
     "dev": "kill-port 3000 4000 && lerna run dev --stream --parallel",
     "build": "lerna run build",
+    "lint": "lerna run lint",
+    "format": "lerna run format --stream --parallel",
+    "test": "lerna run test",
+    "typecheck": "lerna run typecheck",
     "graphql:script": "graphql-codegen --watch",
     "migration": "lerna run migration"
   },
   "author": "Michael Poulgrain",
   "license": "ISC",
-  "workspaces": [
-    "packages/web",
-    "packages/server"
-  ],
   "devDependencies": {
     "@graphql-codegen/cli": "^2.6.1",
     "@graphql-codegen/import-types-preset": "^2.1.14",
@@ -43,6 +43,8 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "commitizen": "^4.2.4",
+    "husky": "^7.0.4",
     "kill-port": "^1.6.1",
     "rimraf": "^3.0.2"
   }

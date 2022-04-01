@@ -1,37 +1,32 @@
 module.exports = {
     root: true,
+    extends: ["eslint:recommended", "prettier"],
     env: {
         node: true,
         es2021: true,
     },
+    parser: "@typescript-eslint/parser",
     overrides: [
         {
-            files: ["*.graphql"],
-            parserOptions: {
-                schema: "./schema.graphql",
+            files: ["*.ts", "*.tsx"],
+            env: {
+                node: true,
+                es2021: true,
             },
-            extends: "plugin:@graphql-eslint/schema-all",
-            rules: {
-                "@graphql-eslint/alphabetize": "off",
-                "@graphql-eslint/no-typename-prefix": "off",
-                "@graphql-eslint/require-field-of-type-query-in-mutation-result":
-                    "off",
-                "@graphql-eslint/input-name": [
-                    "warn",
-                    {
-                        checkInputType: true,
-                        checkQueries: true,
-                    },
-                ],
-            },
-        },
-        {
-            files: ["*.ts", "*.tsx"], // Your TypeScript files extension
             extends: [
+                "eslint:recommended",
+                "prettier",
                 "plugin:@typescript-eslint/recommended",
                 "plugin:@typescript-eslint/recommended-requiring-type-checking",
+                "plugin:@michaelp1994/typegraphql/recommended",
             ],
             rules: {
+                "@michaelp1994/typegraphql/input-type-name": [
+                    1,
+                    {
+                        caseSensitiveInputType: false,
+                    },
+                ],
                 "@typescript-eslint/naming-convention": [
                     "error",
                     {
@@ -47,28 +42,33 @@ module.exports = {
             parserOptions: {
                 tsconfigRootDir: __dirname,
                 project: ["./tsconfig.json"],
-                // include: ["src/**/*.ts"],
                 ecmaVersion: "latest",
                 sourceType: "module",
             },
         },
-    ],
-    extends: [
-        "eslint:recommended",
-        "prettier",
-        "plugin:@michaelp1994/typegraphql/recommended",
-    ],
-    parser: "@typescript-eslint/parser",
-    plugins: ["@typescript-eslint"],
-    rules: {
-        // "@michaelp1994/typegraphql/input-name": 1,
-        "@michaelp1994/typegraphql/input-type-name": [
-            1,
-            {
-                caseSensitiveInputType: false,
+        {
+            files: ["*.graphql"],
+            parser: "@graphql-eslint/eslint-plugin",
+            plugins: ["@graphql-eslint"],
+            parserOptions: {
+                skipGraphQLConfig: true,
+                schema: "./schema.graphql",
             },
-        ],
-        // "@michaelp1994/typegraphql/require-description": 1,
-    },
-    ignorePatterns: ["src/**/*.test.ts"],
+            extends: "plugin:@graphql-eslint/schema-all",
+            rules: {
+                "@graphql-eslint/alphabetize": "off",
+                "@graphql-eslint/no-typename-prefix": "off",
+                "@graphql-eslint/require-field-of-type-query-in-mutation-result":
+                    "off",
+                "@graphql-eslint/input-name": [
+                    "warn",
+                    {
+                        caseSensitiveInputType: false,
+                        checkInputType: true,
+                        checkQueries: true,
+                    },
+                ],
+            },
+        },
+    ],
 };

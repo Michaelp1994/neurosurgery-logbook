@@ -6,7 +6,7 @@
 
   const search = ref("");
   const showMenu = ref(false);
-  const { data, error, fetching } = getSearch(search);
+  const { data, fetching } = getSearch(search);
 
   //const { data, error, fetching } =
   const applicationStore = useApplicationStore();

@@ -2,7 +2,7 @@
   import { useProcedureTopicStatisticsQuery } from "@/services/types.generated";
   import { computed } from "vue";
 
-  const { data, error, fetching } = useProcedureTopicStatisticsQuery();
+  const { data, fetching } = useProcedureTopicStatisticsQuery();
   const series = computed(() =>
     data.value?.allProcedureTopics.map(
       (procedureTopic) => procedureTopic.totalConsults

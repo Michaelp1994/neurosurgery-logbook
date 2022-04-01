@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { useProcedureTypeStatisticsQuery } from "@/services/types.generated";
   import { computed } from "vue";
-  const { data, error, fetching } = useProcedureTypeStatisticsQuery();
+  const { data, fetching } = useProcedureTypeStatisticsQuery();
   const series = computed(() => [
     {
       data: data.value?.allProcedureTypes.map(

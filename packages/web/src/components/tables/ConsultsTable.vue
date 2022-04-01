@@ -2,10 +2,9 @@
   import { QTableProps } from "quasar";
   import { getConsults } from "@/models/consult";
   import { DateTime } from "luxon";
-  const props = defineProps(["modelValue"]);
-  const emits = defineEmits(["update:modelValue"]);
-  // const fetching = ref(true);
-  // const error = ref(false);
+  const props = defineProps<{
+    modelValue: number[];
+  }>();
   const columns: QTableProps["columns"] = [
     {
       name: "procedureDate",
@@ -37,7 +36,7 @@
       sortable: true,
 
       field: "isCompleted",
-      format: (val, row) => {
+      format: (val) => {
         return val ? "Completed" : "In Progress";
       },
       align: "left",
@@ -64,10 +63,10 @@
       :rows="data?.allConsults"
       :loading="fetching"
       :pagination="{ rowsPerPage: 10 }"
-      :visible-columns="modelValue"
+      :visible-columns="props.modelValue"
     >
-      <template #body-cell-action="props">
-        <q-td :props="props">
+      <template #body-cell-action="tableProps">
+        <q-td :props="tableProps">
           <q-btn
             round
             flat
@@ -76,7 +75,7 @@
             text-color="black"
             :to="{
               name: 'viewConsult',
-              params: { id: props.row.id },
+              params: { id: tableProps.row.id },
             }"
           />
         </q-td>

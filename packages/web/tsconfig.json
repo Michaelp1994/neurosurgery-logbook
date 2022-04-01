@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "noEmit": true /* Disable emitting files from a compilation. */,
-    "outDir": "./serve/" /* Specify an output folder for all emitted files. */,
+    "noEmit": true,
+    "outDir": "./serve/",
     "target": "esnext",
     "useDefineForClassFields": true,
     "strictPropertyInitialization": false,
@@ -21,6 +21,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules"]
+  "include": ["**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules", "**/*.generated.ts"]
 }

@@ -218,9 +218,9 @@ query AllUsers {
 
 query Profile {
   profile {
+    id
     email
     firstName
-    id
     lastName
     role
   }

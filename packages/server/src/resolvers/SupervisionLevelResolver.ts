@@ -10,7 +10,6 @@ import {
 import { UserRole } from "../enums/UserRole";
 import { dataSource } from "../data-source";
 import { SupervisionLevel } from "../models/SupervisionLevel";
-import { FundingType } from "../models/FundingType";
 import { Context } from "apollo-server-core";
 import { AuthContext } from "../types";
 import { ConsultProcedure } from "../models/ConsultProcedure";

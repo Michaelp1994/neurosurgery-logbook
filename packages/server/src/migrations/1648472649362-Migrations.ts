@@ -13,5 +13,20 @@ export class Migrations1648472649362 implements MigrationInterface {
         await queryRunner.dropColumn("consult_procedure", "supervisionLevel");
     }
 
-    public async down(queryRunner: QueryRunner): Promise<void> {}
+    public async down(queryRunner: QueryRunner): Promise<void> {
+        //
+        const consultProcedureTable = await queryRunner.getTable(
+            "consult_procedure"
+        );
+        if (!consultProcedureTable)
+            throw Error("cannot find consult_procedure Table.");
+        const SupervisionLevelForeignKey =
+            consultProcedureTable.foreignKeys.find(
+                (foreignKey) =>
+                    foreignKey.referencedTableName === "supervision_level"
+            );
+        if (!SupervisionLevelForeignKey)
+            throw Error("cannot find consult_procedure Foreign Key.");
+        consultProcedureTable.removeForeignKey(SupervisionLevelForeignKey);
+    }
 }

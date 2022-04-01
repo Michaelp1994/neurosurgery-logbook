@@ -4,7 +4,7 @@
   import { watch } from "vue";
 
   const applicationStore = useApplicationStore();
-  const { data, error, fetching } = currentRotation(); //FIXME: needs to be redone. where can I ensure this has been called all the time but not be unnesssarily calling.
+  const { data } = currentRotation(); //FIXME: needs to be redone. where can I ensure this has been called all the time but not be unnesssarily calling.
   watch(
     () => data.value,
     () => {

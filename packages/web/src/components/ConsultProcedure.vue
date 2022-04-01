@@ -8,8 +8,8 @@
     modelValue?: CreateConsultInput["selectedProcedures"];
     readonly: boolean;
   }>();
-  const emits = defineEmits(["update:modelValue", "deleteProcedure"]);
-  const { data, error, fetching } = getProcedures();
+  const emit = defineEmits(["update:modelValue", "deleteProcedure"]);
+  const { data } = getProcedures();
 
   const selectedProcedures = computed(() => {
     if (!props.modelValue || !props.modelValue.length || !data.value) return [];
@@ -38,6 +38,8 @@
         <q-item-section>
           <SupervisionLevelSelect
             v-model="modelValue[index].supervisionLevelId"
+            :model-value="modelValue[index].supervisionLevelId"
+            @update:model-value="emit('update')"
           />
         </q-item-section>
         <q-item-section v-if="!readonly" side>
@@ -47,7 +49,7 @@
             color="red"
             flat
             class="q-pa-sm"
-            @click="emits('deleteProcedure', index)"
+            @click="emit('deleteProcedure', index)"
           />
         </q-item-section>
       </q-item>

@@ -5,7 +5,7 @@
 
 """The supervisor model"""
 type Supervisor {
-  id: Float!
+  id: ID!
   name: String!
   rotations: [Rotation!]!
   consults: [Consult!]!
@@ -23,7 +23,7 @@ scalar DateTime
 
 """The hospital model"""
 type Hospital {
-  id: Float!
+  id: ID!
   name: String!
   urnMask: String
   consults: [Consult!]!
@@ -37,7 +37,7 @@ type Hospital {
 
 """The SET Level model"""
 type SetLevel {
-  id: Float!
+  id: ID!
   name: String!
   rotations: [Rotation!]
   consults: [Consult!]
@@ -48,7 +48,7 @@ type SetLevel {
 
 """The rotation model"""
 type Rotation {
-  id: Float!
+  id: ID!
   name: String!
   startDate: DateTime!
   endDate: DateTime!
@@ -67,7 +67,7 @@ type Rotation {
 
 """The user model"""
 type User {
-  id: Float!
+  id: ID!
   firstName: String!
   lastName: String!
   email: String!
@@ -89,7 +89,7 @@ enum UserRole {
 
 """User login authentication model"""
 type Token {
-  id: Float!
+  id: ID!
   token: String!
   firstName: String!
   lastName: String!
@@ -98,7 +98,7 @@ type Token {
 
 """The Procedure Topic Model"""
 type ProcedureTopic {
-  id: Float!
+  id: ID!
   name: String!
   shortName: String!
   totalConsults: Float!
@@ -110,7 +110,7 @@ type ProcedureTopic {
 
 """The procedure type model"""
 type ProcedureType {
-  id: Float!
+  id: ID!
   name: String!
   procedures: [Procedure!]!
   topicId: Float!
@@ -123,7 +123,7 @@ type ProcedureType {
 
 """The procedure model"""
 type Procedure {
-  id: Float!
+  id: ID!
   name: String!
   typeId: Float!
   totalConsults: Float!
@@ -139,7 +139,7 @@ type Procedure {
 
 """The Supervision Level model"""
 type SupervisionLevel {
-  id: Float!
+  id: ID!
   name: String!
   procedures: [ConsultProcedure!]
   totalConsults: Float!
@@ -150,7 +150,7 @@ type SupervisionLevel {
 
 """The many-to-many relation between Consult & Procedure"""
 type ConsultProcedure {
-  id: Float!
+  id: ID!
   consultId: Float!
   procedureId: Float!
   supervisionLevelId: Float!
@@ -164,7 +164,7 @@ type ConsultProcedure {
 
 """The ASA Grade model"""
 type AsaGrade {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -174,7 +174,7 @@ type AsaGrade {
 
 """The Ethnicity model"""
 type Ethnicity {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -184,7 +184,7 @@ type Ethnicity {
 
 """The Funding Type model"""
 type FundingType {
-  id: Float!
+  id: ID!
   name: String!
   totalConsults: Float!
   consults: [Consult!]
@@ -195,7 +195,7 @@ type FundingType {
 
 """The Return To Theatre model"""
 type ReturnToTheatre {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -205,7 +205,7 @@ type ReturnToTheatre {
 
 """The Type Of Anaesthetic model"""
 type TypeOfAnaesthetic {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -215,7 +215,7 @@ type TypeOfAnaesthetic {
 
 """The Unplanned ICU model"""
 type UnplannedIcu {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -225,7 +225,7 @@ type UnplannedIcu {
 
 """The Unplanned Readmission model"""
 type UnplannedReadmission {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -235,7 +235,7 @@ type UnplannedReadmission {
 
 """The Wound Infection Risk model"""
 type WoundInfectionRisk {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -245,7 +245,7 @@ type WoundInfectionRisk {
 
 """The Mortality Classification model"""
 type MortalityClassification {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -255,7 +255,7 @@ type MortalityClassification {
 
 """The Outcome model"""
 type Outcome {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -271,7 +271,7 @@ type CaseDuration {
 
 """The consult/case model"""
 type Consult {
-  id: Float!
+  id: ID!
   name: String!
   urn: String!
   setLevelId: Float!
@@ -343,23 +343,9 @@ type RecognisedText {
   dateOfBirth: String
 }
 
-"""OCR Result for Patient Label"""
-type Statistics {
-  totalConsults: Float
-  spinal: Float
-  cranial: Float
-  peripheralNerveSurgery: Float
-  primary: Float
-  secondary: Float
-  assistant: Float
-  publicFunded: Float
-  privateFunded: Float
-  procedureTypeArray: [Float!]
-}
-
 """The Admission Category model"""
 type AdmissionCategory {
-  id: Float!
+  id: ID!
   name: String!
   consults: [Consult!]
   createdAt: DateTime!
@@ -594,14 +580,6 @@ input SupervisorInput {
   id: ID!
 }
 
-"""Input for creating user"""
-input CreateUserInput {
-  email: String!
-  password: String!
-  firstName: String!
-  lastName: String!
-}
-
 """Input for registering user"""
 input RegisterInput {
   email: String!
@@ -679,6 +657,7 @@ type Query {
   procedure(input: ProcedureInput!): Procedure!
   allProcedureTopics: [ProcedureTopic!]!
   allProcedureTypes: [ProcedureType!]!
+  procedureType(input: ProcedureTypeInput!): ProcedureType!
   allReturnToTheatres: [ReturnToTheatre!]!
   allRotations: [Rotation!]!
   rotation(input: RotationInput!): Rotation!

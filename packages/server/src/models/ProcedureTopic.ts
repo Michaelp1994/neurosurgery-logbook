@@ -8,13 +8,13 @@ import {
     UpdateDateColumn,
     OneToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { ProcedureType } from "./ProcedureType";
 
 @Entity()
 @ObjectType({ description: "The Procedure Topic Model" })
 export class ProcedureTopic extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

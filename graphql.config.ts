@@ -1,10 +1,9 @@
-// import type { IGraphQLConfig } from "graphql-config";
+import type { IGraphQLConfig } from "graphql-config";
 // import type { Config } from "@graphql-codegen/cli";
 
-const config = {
+const config: IGraphQLConfig = {
   schema: "./server/schema.graphql",
   documents: "./web/src/services/**/*.graphql",
-  watch: ["web/src/**/*.graphql", "server/src/**/*.ts", "my-plugin.js"],
   extensions: {
     endpoints: {
       default: {
@@ -12,6 +11,7 @@ const config = {
       },
     },
     codegen: {
+      watch: ["web/src/**/*.graphql", "server/src/**/*.ts"],
       generates: {
         "web/src/services/types.generated.ts": {
           config: {

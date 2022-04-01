@@ -8,13 +8,13 @@ import {
     UpdateDateColumn,
     OneToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Consult } from "./Consult";
 
 @Entity()
 @ObjectType({ description: "The Wound Infection Risk model" })
 export class WoundInfectionRisk extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

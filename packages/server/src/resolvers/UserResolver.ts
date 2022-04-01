@@ -32,8 +32,8 @@ import {
     UserInputError,
 } from "apollo-server-core";
 import { AuthContext } from "../types";
-import nodemailer from "nodemailer";
 import { dataSource } from "../data-source";
+import { sendForgotEmail } from "../services/emailService";
 
 const consultRepository = dataSource.getRepository(Consult);
 const userRepository = dataSource.getRepository(User);
@@ -107,26 +107,7 @@ export class UserResolver implements ResolverInterface<User> {
         if (!user) return true;
         const recoveryToken = user.generateRecoveryToken();
         await userRepository.save(user);
-        const testAccount = await nodemailer.createTestAccount();
-
-        const transporter = nodemailer.createTransport({
-            host: "smtp.ethereal.email",
-            port: 587,
-            secure: false, // true for 465, false for other ports
-            auth: {
-                user: testAccount.user, // generated ethereal user
-                pass: testAccount.pass, // generated ethereal password
-            },
-        });
-        const info = await transporter.sendMail({
-            from: '"Neurosurgery Logbook" <foo@example.com>', // sender address
-            to: user.email, // list of receivers
-            subject: "Your logbook Security Code", // Subject line
-            text: "", // plain text body
-            html: `<b>Hi ${user.firstName},</b><br /><br /> To reset your password, please follow the <a href='${process.env.WEBSITE_URL}/resetPassword/${user.id}/${recoveryToken}'link<b>here<br/><br />`, // html body
-        });
-        console.log("Message sent: %s", info.messageId);
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        await sendForgotEmail(user, recoveryToken);
         return true;
     }
 

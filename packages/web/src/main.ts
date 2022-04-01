@@ -29,7 +29,6 @@ import VueApexCharts from "vue3-apexcharts";
 
 //VUE
 const app = createApp(App);
-
 // PINIA
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
@@ -52,7 +51,7 @@ app.use(router);
 //   window.location.port +
 //   "/graphql";
 app.use(urql, {
-  url: import.meta.env.VITE_SERVER_URL,
+  url: "/graphql",
   //url: path,
   exchanges: [
     dedupExchange,

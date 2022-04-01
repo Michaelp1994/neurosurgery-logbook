@@ -8,14 +8,14 @@ import {
     UpdateDateColumn,
     OneToMany,
 } from "typeorm";
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, ID } from "type-graphql";
 import { Rotation } from "./Rotation";
 import { Consult } from "./Consult";
 
 @Entity()
 @ObjectType({ description: "The SET Level model" })
 export class SetLevel extends BaseEntity {
-    @Field()
+    @Field(() => ID)
     @PrimaryGeneratedColumn()
     readonly id: number;
 

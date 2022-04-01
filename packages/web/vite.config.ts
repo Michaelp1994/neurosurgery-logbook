@@ -6,6 +6,13 @@ import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   //base: "http://neurologbook.com/",
+  server: {
+    proxy: {
+      "/graphql": {
+        target: "http://localhost:4000/graphql",
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

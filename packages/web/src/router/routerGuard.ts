@@ -1,5 +1,4 @@
 import { useApplicationStore } from "@/store/Application.store";
-import { UserRole } from "@/services/types.generated";
 import { RouteLocationNormalized } from "vue-router";
 
 export default (to: RouteLocationNormalized) => {

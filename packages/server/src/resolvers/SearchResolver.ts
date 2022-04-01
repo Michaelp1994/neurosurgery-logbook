@@ -2,7 +2,6 @@ import { Arg, Authorized, Query } from "type-graphql";
 import { SearchInput } from "../inputs/SearchInput";
 import { dataSource } from "../data-source";
 import { Consult } from "../models/Consult";
-import { Like } from "typeorm";
 import { UserRole } from "../enums/UserRole";
 
 const consultRepository = dataSource.getRepository(Consult);

@@ -74,20 +74,25 @@ export function useUpdateRotation(id: number) {
 
   useRotationQuery({
     variables: { input: { id } },
-  }).then((result) => {
-    error.value = result.error.value;
-    fetching.value = false;
-    // check for errors etc
-    Object.keys(input).forEach((key) => {
-      input[key] = result.data.value?.rotation[key];
-    });
-    input.setLevelId = result.data.value?.rotation.setLevel.id;
-    input.supervisorIds = result.data.value?.rotation.supervisors.map(
-      (supervisor) => {
-        return supervisor.id;
-      }
-    );
-  });
+  }).then(
+    (result) => {
+      error.value = result.error.value;
+      fetching.value = false;
+      // check for errors etc
+      Object.keys(input).forEach((key) => {
+        input[key] = result.data.value?.rotation[key];
+      });
+      input.setLevelId = result.data.value?.rotation.setLevel.id;
+      input.supervisorIds = result.data.value?.rotation.supervisors.map(
+        (supervisor) => {
+          return supervisor.id;
+        }
+      );
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   function updateRotation(input: UpdateRotationInput) {
     const result = updateRotationMutation.executeMutation({

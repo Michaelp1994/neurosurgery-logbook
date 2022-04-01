@@ -2,7 +2,7 @@
   import { useSupervisionLevelStatisticsQuery } from "@/services/types.generated";
   import { computed } from "vue";
 
-  const { data, error, fetching } = useSupervisionLevelStatisticsQuery();
+  const { data, fetching } = useSupervisionLevelStatisticsQuery();
   const series = computed(() =>
     data.value?.allSupervisionLevels.map(
       (supervisionLevel) => supervisionLevel.totalConsults

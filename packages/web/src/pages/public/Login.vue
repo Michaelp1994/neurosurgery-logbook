@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { computed, ref } from "vue";
+  import { ref } from "vue";
   import { useApplicationStore } from "@/store/Application.store";
   import { useRouter } from "vue-router";
   import { useLogin } from "@/models/user";

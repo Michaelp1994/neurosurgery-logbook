@@ -12,6 +12,7 @@ import {
 import {
     CreateProcedureTypeInput,
     DeleteProcedureTypeInput,
+    ProcedureTypeInput,
     UpdateProcedureTypeInput,
 } from "../inputs/ProcedureTypeInput";
 import { Procedure } from "../models/Procedure";
@@ -59,6 +60,19 @@ export class ProcedureTypeResolver implements ResolverInterface<ProcedureType> {
         const procedureTypes = await procedureTypeRepository.find();
         return procedureTypes;
     }
+
+    @Authorized([UserRole.USER, UserRole.ADMIN])
+    @Query(() => ProcedureType)
+    async procedureType(
+        @Arg("input") input: ProcedureTypeInput
+    ): Promise<ProcedureType> {
+        const procedure = await procedureTypeRepository.findOne({
+            where: { id: input.id },
+        });
+        if (!procedure) throw new Error("No Rotation Found!");
+        return procedure;
+    }
+
     @Authorized(UserRole.ADMIN)
     @Mutation(() => ProcedureType)
     async createProcedureType(

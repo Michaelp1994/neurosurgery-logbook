@@ -2,24 +2,6 @@ import { InputType, Field, ID } from "type-graphql";
 import { User } from "../models/User";
 import { MaxLength } from "class-validator";
 
-@InputType({ description: "Input for creating user" })
-export class CreateUserInput implements Partial<User> {
-    @Field()
-    @MaxLength(100)
-    email: string;
-
-    @Field()
-    password: string;
-
-    @Field()
-    @MaxLength(50)
-    firstName: string;
-
-    @Field()
-    @MaxLength(50)
-    lastName: string;
-}
-
 @InputType({ description: "Input for registering user" })
 export class RegisterInput implements Partial<User> {
     @Field()

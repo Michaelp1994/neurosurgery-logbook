@@ -53,14 +53,19 @@ export function useUpdateHospital(id: number) {
 
   useHospitalQuery({
     variables: { input: { id } },
-  }).then((result) => {
-    error.value = result.error.value;
-    fetching.value = false;
-    // check for errors etc
-    Object.keys(input).forEach((key) => {
-      input[key] = result.data.value?.hospital[key];
-    });
-  });
+  }).then(
+    (result) => {
+      error.value = result.error.value;
+      fetching.value = false;
+      // check for errors etc
+      Object.keys(input).forEach((key) => {
+        input[key] = result.data.value?.hospital[key];
+      });
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   function updateHospital(input: UpdateHospitalInput) {
     const result = updateHospitalMutation.executeMutation({

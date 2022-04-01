@@ -1,9 +1,9 @@
 <script setup lang="ts">
   import { QTableProps } from "quasar";
-  import { DateTime } from "luxon";
   import { useProcedureLogbookQuery } from "@/services/types.generated";
-  const props = defineProps(["modelValue"]);
-  const emits = defineEmits(["update:modelValue"]);
+  const props = defineProps<{
+    modelValue: number[];
+  }>();
 
   const columns: QTableProps["columns"] = [
     {
@@ -52,10 +52,10 @@
       :rows="data?.allProcedures"
       :loading="fetching"
       :pagination="{ rowsPerPage: 10 }"
-      :visible-columns="modelValue"
+      :visible-columns="props.modelValue"
     >
-      <template #body-cell-action="props">
-        <q-td :props="props">
+      <template #body-cell-action="tableProps">
+        <q-td :props="tableProps">
           <q-btn
             round
             flat
@@ -64,7 +64,7 @@
             text-color="black"
             :to="{
               name: 'viewConsult',
-              params: { id: props.row.id },
+              params: { id: tableProps.row.id },
             }"
           />
         </q-td>

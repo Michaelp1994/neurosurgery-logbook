@@ -1,10 +1,6 @@
 import { dataSource } from "./data-source";
-import { Consult } from "./models/Consult";
 import { ConsultProcedure } from "./models/ConsultProcedure";
-import { Procedure } from "./models/Procedure";
-const consultRepository = dataSource.getRepository(Consult);
 const consultProcedureRepository = dataSource.getRepository(ConsultProcedure);
-const procedureRepository = dataSource.getRepository(Procedure);
 
 async function testing() {
     await dataSource.initialize();

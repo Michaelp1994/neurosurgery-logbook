@@ -1,16 +1,19 @@
 <script setup lang="ts">
   import { getSupervisors } from "@/models/supervisor";
-  import { ref, reactive } from "vue";
 
-  const props = defineProps(["modelValue"]);
-  const emits = defineEmits(["update:modelValue"]);
+  const props = defineProps<{
+    modelValue: number;
+  }>();
+  const emit = defineEmits<{
+    (e: "update:modelValue", id: number): void;
+  }>();
 
-  const { data, error, fetching } = getSupervisors();
+  const { data, fetching } = getSupervisors();
 </script>
 
 <template>
   <q-select
-    :model-value="modelValue"
+    :model-value="props.modelValue"
     outlined
     option-value="id"
     option-label="name"
@@ -19,7 +22,7 @@
     map-options
     placeholder="Supervisors"
     :options="data?.allSupervisors"
-    @update:model-value="(newValue) => $emit('update:modelValue', newValue)"
+    @update:model-value="(newValue) => emit('update:modelValue', newValue)"
   />
 </template>
 <style scoped></style>

@@ -17,7 +17,7 @@ import {
     ConsultInput,
     ImageUploadInput,
 } from "../inputs/ConsultInput";
-import { Consult, RecognisedText, Statistics } from "../models/Consult";
+import { Consult, RecognisedText } from "../models/Consult";
 import { User } from "../models/User";
 import { UserRole } from "../enums/UserRole";
 import { Context } from "apollo-server-core";
@@ -41,7 +41,6 @@ import { Outcome } from "../models/Outcome";
 import { UnplannedReadmission } from "../models/UnplannedReadmission";
 import { MortalityClassification } from "../models/MortalityClassification";
 import { SetLevel } from "../models/SetLevel";
-import { Procedure } from "../models/Procedure";
 
 const consultRepository = dataSource.getRepository(Consult);
 const userRepository = dataSource.getRepository(User);
@@ -60,7 +59,6 @@ const outcomeRepository = dataSource.getRepository(Outcome);
 const ethnicityRepository = dataSource.getRepository(Ethnicity);
 const consultProcedureRepository = dataSource.getRepository(ConsultProcedure);
 const setLevelRepository = dataSource.getRepository(SetLevel);
-const procedureRepository = dataSource.getRepository(Procedure);
 
 const unplannedReadmissionRepository =
     dataSource.getRepository(UnplannedReadmission);
