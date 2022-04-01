@@ -25,7 +25,7 @@ async function startServer() {
         resolvers: [path.join(__dirname, "resolvers", "**", "*.{ts,js}")],
         authChecker: authChecker,
         emitSchemaFile: {
-            path: "./schema.graphql",
+            path: path.join(__dirname, "schema.graphql"),
             sortedSchema: false,
         },
     });
