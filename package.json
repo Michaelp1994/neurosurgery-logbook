@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "lerna run clean",
+    "heroku-prebuild": "lerna bootstrap",
     "build:web": "lerna run build --scope @neurosurgery_logbook/web",
     "build:server": "lerna run build --scope @neurosurgery_logbook/server",
     "build": "lerna run build",
