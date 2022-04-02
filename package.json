@@ -5,8 +5,8 @@
   "description": "",
   "main": "dist/index.js",
   "engines": {
-    "node": "16.14.2",
-    "npm": "8.5.0"
+    "node": "16.14.x",
+    "npm": "8.5.x"
 },
   "scripts": {
     "clean": "lerna run clean",
@@ -15,7 +15,9 @@
     "build:server": "lerna run build --scope @neurosurgery_logbook/server",
     "build": "lerna run build",
     "dev": "kill-port 3000 4000 && lerna run dev --parallel --stream",
-    "start": "node packages/server/dist/index.js"
+    "start": "node packages/server/dist/index.js",
+    "lint": "lerna run lint",
+    "format": "lerna run format"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",

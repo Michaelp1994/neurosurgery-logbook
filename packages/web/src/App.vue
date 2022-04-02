@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
+<script setup></script>
 
 <template>
-  <q-layout>
+  <q-layout my-prop="test">
     <router-view />
   </q-layout>
 </template>

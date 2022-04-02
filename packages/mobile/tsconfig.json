@@ -10,8 +10,8 @@
     "importHelpers": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["app/*"],
-      "@/*": ["app/*"]
+      "~/*": ["src/*"],
+      "@/*": ["src/*"]
     },
     "typeRoots": ["types"],
     "types": ["node"],
@@ -21,6 +21,6 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true
   },
-  "include": ["app", "types"],
+  "include": ["src", "types"],
   "exclude": ["node_modules", "platforms"]
 }

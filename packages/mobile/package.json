@@ -1,8 +1,15 @@
 {
   "name": "neurosurgery_logbook_mobile",
-  "main": "app/app.ts",
+  "main": "src/app.ts",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "clean": "ns clean",
+    "build": "ns build android",
+    "dev": "ns run android",
+    "format": "prettier --write src/**/*",
+    "lint": "eslint --fix src/**/*"
+  },
   "dependencies": {
     "@nativescript/camera": "^5.0.10",
     "@nativescript/core": "~8.1.1",
@@ -13,11 +20,16 @@
     "vuex": "^3.1.0"
   },
   "devDependencies": {
-    "@nativescript/android": "~8.1.1",
+    "@graphql-eslint/eslint-plugin": "^3.10.1",
+    "@nativescript/android": "8.2.2",
     "@nativescript/types": "~8.1.1",
     "@nativescript/webpack": "~5.0.0",
     "@types/node": "~14.6.2",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint-plugin-vue": "^8.5.0",
     "nativescript-vue-template-compiler": "~2.9.0",
+    "prettier": "^2.6.1",
     "typescript": "~4.3.5",
     "vue": "~2.6.12"
   }
