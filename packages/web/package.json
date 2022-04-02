@@ -4,7 +4,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite --host",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm install --only=dev",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
