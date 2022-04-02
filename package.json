@@ -6,11 +6,11 @@
   "main": "dist/index.js",
   "engines": {
     "node": "16.14.2",
-    "npm": "8.6.0"
+    "npm": "8.5.0"
 },
   "scripts": {
     "clean": "lerna run clean",
-    "prebuild": "lerna bootstrap",
+    "postinstall": "lerna bootstrap",
     "build:web": "lerna run build --scope @neurosurgery_logbook/web",
     "build:server": "lerna run build --scope @neurosurgery_logbook/server",
     "build": "lerna run build",
