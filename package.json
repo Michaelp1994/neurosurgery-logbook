@@ -4,9 +4,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.6.0"
+},
   "scripts": {
     "clean": "lerna run clean",
-    "postinstall": "lerna bootstrap",
+    "postinstall": "lerna bootstrap && lerna run build",
     "build:web": "lerna run build --scope @neurosurgery_logbook/web",
     "build:server": "lerna run build --scope @neurosurgery_logbook/server",
     "build": "lerna run build",
