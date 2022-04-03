@@ -8,7 +8,7 @@
     },
     "scripts": {
         "clean": "rimraf dist",
-        "dev": "nodemon ",
+        "dev": "nodemon",
         "prebuild": "npm run clean",
         "build": "tsc",
         "preview": "node dist/index.js",

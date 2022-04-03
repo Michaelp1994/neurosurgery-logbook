@@ -1,0 +1,9 @@
+dev-dist/
+dist/
+public/
+
+node_modules/
+*.generated.*
+schema.graphql
+*.png
+*.sass

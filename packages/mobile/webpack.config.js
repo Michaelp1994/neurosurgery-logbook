@@ -8,7 +8,7 @@ module.exports = (env) => {
   // https://docs.nativescript.org/webpack
   webpack.chainWebpack((config) => {
     // change the "@" alias to "app/libs"
-    config.resolve.alias.set("@", resolve(__dirname, "app"));
+    config.resolve.alias.set("@", resolve(__dirname, "src"));
   });
   return webpack.resolveConfig();
 };

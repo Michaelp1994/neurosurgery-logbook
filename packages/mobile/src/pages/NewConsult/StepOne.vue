@@ -54,8 +54,8 @@
       <ActionItem android.systemIcon="ic_menu_camera" @tap="onCameraTap" />
     </ActionBar>
     <MLKitView
-      cameraPosition="back"
-      detectionType="all"
+      camera-position="back"
+      detection-type="all"
       @detection="onDetection"
     />
     <GridLayout rows="auto, *, auto" class="nt-form">
@@ -81,7 +81,7 @@
         <TextField
           v-model="newConsult.dateOfBirth"
           class="input"
-          keyboardType="datetime"
+          keyboard-type="datetime"
         />
         <!-- <DatePicker v-model="newConsult.dateOfBirth" /> -->
       </StackLayout>

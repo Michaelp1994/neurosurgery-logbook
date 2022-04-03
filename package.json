@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "neurosurgery-logbook",
+  "name": "neurosurgery_logbook",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -11,13 +11,16 @@
   "scripts": {
     "clean": "lerna run clean",
     "postinstall": "lerna bootstrap",
-    "build:web": "lerna run build --scope @neurosurgery_logbook/web",
-    "build:server": "lerna run build --scope @neurosurgery_logbook/server",
+    "build:web": "lerna run build --scope */web",
+    "build:mobile": "lerna run build --scope */mobile",
+    "build:server": "lerna run build --scope */server",
     "build": "lerna run build",
-    "dev": "kill-port 3000 4000 && lerna run dev --parallel --stream",
+    "dev:web": "kill-port 3000 && lerna run dev --scope */web",
+    "dev:server": "kill-port 4000 && lerna run dev --scope @neurosurgery_logbook/server --stream",
+    "dev:mobile": "lerna run dev --scope */mobile --stream",
     "start": "node packages/server/dist/index.js",
-    "lint": "lerna run lint",
-    "format": "lerna run format"
+    "lint": "lerna run lint --parallel --stream --no-bail",
+    "format": "lerna run format --parallel"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",

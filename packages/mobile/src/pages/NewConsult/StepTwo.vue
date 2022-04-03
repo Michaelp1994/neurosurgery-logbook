@@ -47,7 +47,10 @@
         <Label class="InputLabel">SET Level</Label>
         <TextField v-model="newConsult.setLevel" />
         <Label class="InputLabel">Procedure Date</Label>
-        <TextField v-model="newConsult.procedureDate" keyboardType="datetime" />
+        <TextField
+          v-model="newConsult.procedureDate"
+          keyboard-type="datetime"
+        />
         <!-- <DatePicker v-model="newConsult.dateOfBirth" /> -->
       </StackLayout>
       <StackLayout row="2" style="margin-bottom: 50px">

@@ -1,5 +1,5 @@
 {
-  "name": "neurosurgery_logbook_mobile",
+  "name": "@neurosurgery_logbook/mobile",
   "main": "src/app.ts",
   "version": "1.0.0",
   "private": true,
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nativescript/camera": "^5.0.10",
-    "@nativescript/core": "~8.1.1",
+    "@nativescript/core": "^8.2.1",
     "@nativescript/mlkit-core": "^1.0.0-alpha.0",
     "@nativescript/mlkit-text-recognition": "^1.0.0-alpha.0",
     "@nativescript/theme": "~3.0.1",
@@ -22,15 +22,17 @@
   "devDependencies": {
     "@graphql-eslint/eslint-plugin": "^3.10.1",
     "@nativescript/android": "8.2.2",
-    "@nativescript/types": "~8.1.1",
+    "@nativescript/ios": "8.2.3",
+    "@nativescript/types": "^8.2.0",
     "@nativescript/webpack": "~5.0.0",
-    "@types/node": "~14.6.2",
+    "@types/node": "^17.0.23",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^10.0.0",
     "eslint-plugin-vue": "^8.5.0",
+    "nativescript": "^8.2.3",
     "nativescript-vue-template-compiler": "~2.9.0",
     "prettier": "^2.6.1",
-    "typescript": "~4.3.5",
+    "typescript": "^4.6.3",
     "vue": "~2.6.12"
   }
 }

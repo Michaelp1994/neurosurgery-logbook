@@ -8,6 +8,11 @@
         StepOne,
       };
     },
+    computed: {
+      message() {
+        return "Blank {N}-Vue app";
+      },
+    },
     mounted() {
       requestPermissions().then(
         function success() {
@@ -19,11 +24,6 @@
           // ... tell the user ...
         }
       );
-    },
-    computed: {
-      message() {
-        return "Blank {N}-Vue app";
-      },
     },
   });
 </script>
@@ -40,8 +40,8 @@
       <Button
         text="Create New"
         row="1"
-        @tap="$navigateTo(StepOne)"
         class="btn"
+        @tap="$navigateTo(StepOne)"
       />
     </GridLayout>
   </Page>

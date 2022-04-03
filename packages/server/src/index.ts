@@ -31,7 +31,7 @@ async function startServer() {
     });
     app.use(cors());
     app.use(graphqlUploadExpress({ maxFileSize: 10000000, maxFiles: 10 }));
-    console.log(process.env.NODE_ENV);
+
     if (process.env.NODE_ENV === "production") {
         app.use(
             express.static(path.join(__dirname, "..", "..", "web", "dist"))

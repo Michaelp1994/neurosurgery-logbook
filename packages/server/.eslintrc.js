@@ -1,12 +1,10 @@
 module.exports = {
     root: true,
-    extends: ["eslint:recommended", "prettier"],
-    env: {
-        node: true,
-        es2021: true,
-    },
-    parser: "@typescript-eslint/parser",
     overrides: [
+        {
+            files: ["*.html"],
+            extends: ["plugin:@html-eslint/recommended"],
+        },
         {
             files: ["*.ts", "*.tsx"],
             env: {
@@ -52,7 +50,7 @@ module.exports = {
             plugins: ["@graphql-eslint"],
             parserOptions: {
                 skipGraphQLConfig: true,
-                schema: "./schema.graphql",
+                schema: "./src/schema.graphql",
             },
             extends: "plugin:@graphql-eslint/schema-all",
             rules: {

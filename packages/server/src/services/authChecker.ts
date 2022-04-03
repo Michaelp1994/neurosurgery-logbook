@@ -7,7 +7,7 @@ import jwt, { TokenExpiredError } from "jsonwebtoken";
 const JWT_SECRET = process.env.JWT_SECRET;
 if (!JWT_SECRET) throw Error("No secret for JWT!");
 
-// TODO: redo this entirely. check types.
+// TODO: redo this entirely. check types. test test test
 export const contextGenerator: ContextFunction<
     BaseContextType,
     ReturnContext

@@ -1,1 +1,2 @@
-packages/mobile
+# delete mobile package on heroku.
+packages/mobile 

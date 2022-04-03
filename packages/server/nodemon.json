@@ -1,6 +1,7 @@
 {
-    "watch": ["src/**/*.ts"],
-    "ignore": ["src/**/*.spec.ts"],
+    "watch": ["./src/**/*"],
+    "ignore": ["./src/schema.graphql"],
+    "ext": "js ts mjs json env html",
     "exec": "ts-node src/index.ts",
     "events": {
         "start": "node -e console.clear()"
