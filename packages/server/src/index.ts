@@ -32,16 +32,16 @@ async function startServer() {
     app.use(cors());
     app.use(graphqlUploadExpress({ maxFileSize: 10000000, maxFiles: 10 }));
 
-    if (process.env.NODE_ENV === "production") {
-        app.use(
-            express.static(path.join(__dirname, "..", "..", "web", "dist"))
-        );
-        app.get("*", (req, res) => {
-            res.sendFile(
-                path.join(__dirname, "..", "..", "web", "dist", "index.html")
-            );
-        });
-    }
+    // if (process.env.NODE_ENV === "production") {
+    //     app.use(
+    //         express.static(path.join(__dirname, "..", "..", "web", "dist"))
+    //     );
+    //     app.get("*", (req, res) => {
+    //         res.sendFile(
+    //             path.join(__dirname, "..", "..", "web", "dist", "index.html")
+    //         );
+    //     });
+    // }
 
     await dataSource.initialize();
     const server = new ApolloServer({
