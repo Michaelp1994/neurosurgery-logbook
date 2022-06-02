@@ -51,7 +51,7 @@ app.use(router);
 //   window.location.port +
 //   "/graphql";
 app.use(urql, {
-  url: "/graphql",
+  url: "https://l1l6mwvled.execute-api.eu-central-1.amazonaws.com",
   //url: path,
   exchanges: [
     dedupExchange,

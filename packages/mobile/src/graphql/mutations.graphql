@@ -1,0 +1,396 @@
+mutation Login($input: LoginInput!) {
+  login(input: $input) {
+    firstName
+    id
+    lastName
+    role
+    token
+  }
+}
+mutation ForgotPassword($input: ForgotPasswordInput!) {
+  forgotPassword(input: $input)
+}
+
+mutation ResetPassword($input: ResetPasswordInput!) {
+  resetPassword(input: $input)
+}
+
+mutation CreateProcedure($input: CreateProcedureInput!) {
+  createProcedure(input: $input) {
+    id
+    name
+  }
+}
+mutation CreateHospital($input: CreateHospitalInput!) {
+  createHospital(input: $input) {
+    id
+    name
+  }
+}
+
+mutation CreateSupervisor($input: CreateSupervisorInput!) {
+  createSupervisor(input: $input) {
+    id
+    name
+  }
+}
+mutation CreateRotation($input: CreateRotationInput!) {
+  createRotation(input: $input) {
+    id
+    name
+  }
+}
+mutation CreateProcedureType($input: CreateProcedureTypeInput!) {
+  createProcedureType(input: $input) {
+    id
+    name
+  }
+}
+
+mutation CreateConsult($input: CreateConsultInput!) {
+  createConsult(input: $input) {
+    id
+    name
+    urn
+    userId
+    hospital {
+      id
+      name
+    }
+    rotationPeriod {
+      id
+      name
+    }
+    setLevel {
+      id
+      name
+    }
+    procedureDate
+    supervisor {
+      id
+      name
+    }
+    startTime
+    endTime
+    gender
+    ethnicity {
+      id
+      name
+    }
+    admissionDate
+    dateOfBirth
+    patientAge
+    procedureDuration {
+      hours
+      minutes
+    }
+    admissionCategory {
+      id
+      name
+    }
+    unplannedReadmission {
+      id
+      name
+    }
+    fundingType {
+      id
+      name
+    }
+    diagnosisDate
+    preManagementDiagnosis
+    recognisedCoMorbidities
+    asaGrade {
+      id
+      name
+    }
+    woundInfectionRisk {
+      id
+      name
+    }
+    typeOfAnaesthetic {
+      id
+      name
+    }
+    prophylaxis
+    finalDiagnosis
+    pathologicalDiagnoses
+    unplannedIcu {
+      id
+      name
+    }
+    returnToTheatre {
+      id
+      name
+    }
+    dischargeDate
+    outcome {
+      id
+      name
+    }
+    mortalityClassification {
+      id
+      name
+    }
+    recurrenceDate
+    discussedAtMdm
+    comments
+    user {
+      id
+      firstName
+      lastName
+    }
+    createdAt
+    updatedAt
+    deletedAt
+    procedures {
+      id
+      procedure {
+        id
+        name
+        type {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+mutation UpdateProcedure($input: UpdateProcedureInput!) {
+  updateProcedure(input: $input) {
+    id
+    name
+  }
+}
+mutation UpdateProcedureType($input: UpdateProcedureTypeInput!) {
+  updateProcedureType(input: $input) {
+    id
+    name
+  }
+}
+mutation UpdateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    id
+  }
+}
+
+mutation UpdateProfile($input: UpdateProfileInput!) {
+  updateProfile(input: $input) {
+    id
+    firstName
+    lastName
+    email
+  }
+}
+
+mutation UpdatePassword($input: UpdatePasswordInput!) {
+  updatePassword(input: $input) {
+    id
+    firstName
+    lastName
+    email
+  }
+}
+
+mutation UpdateHospital($input: UpdateHospitalInput!) {
+  updateHospital(input: $input) {
+    id
+    name
+    urnMask
+  }
+}
+
+mutation UpdateSupervisor($input: UpdateSupervisorInput!) {
+  updateSupervisor(input: $input) {
+    id
+    name
+  }
+}
+
+mutation UpdateRotation($input: UpdateRotationInput!) {
+  updateRotation(input: $input) {
+    id
+    name
+    startDate
+    endDate
+    setLevel {
+      id
+      name
+    }
+    hospitalId
+    hospital {
+      id
+      name
+    }
+    supervisors {
+      id
+      name
+    }
+  }
+}
+
+mutation UpdateConsult($input: UpdateConsultInput!) {
+  updateConsult(input: $input) {
+    id
+    name
+    urn
+    userId
+    hospital {
+      id
+      name
+    }
+    rotationPeriod {
+      id
+      name
+    }
+    setLevel {
+      id
+      name
+    }
+    procedureDate
+    supervisor {
+      id
+      name
+    }
+    startTime
+    endTime
+    gender
+    ethnicity {
+      id
+      name
+    }
+    admissionDate
+    dateOfBirth
+    patientAge
+    procedureDuration {
+      hours
+      minutes
+    }
+    admissionCategory {
+      id
+      name
+    }
+    unplannedReadmission {
+      id
+      name
+    }
+    fundingType {
+      id
+      name
+    }
+    diagnosisDate
+    preManagementDiagnosis
+    recognisedCoMorbidities
+    asaGrade {
+      id
+      name
+    }
+    woundInfectionRisk {
+      id
+      name
+    }
+    typeOfAnaesthetic {
+      id
+      name
+    }
+    prophylaxis
+    finalDiagnosis
+    pathologicalDiagnoses
+    unplannedIcu {
+      id
+      name
+    }
+    returnToTheatre {
+      id
+      name
+    }
+    dischargeDate
+    outcome {
+      id
+      name
+    }
+    mortalityClassification {
+      id
+      name
+    }
+    recurrenceDate
+    discussedAtMdm
+    comments
+    user {
+      id
+      firstName
+      lastName
+    }
+    createdAt
+    updatedAt
+    deletedAt
+    procedures {
+      id
+      procedure {
+        id
+        name
+        type {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+mutation Register($input: RegisterInput!) {
+  register(input: $input) {
+    firstName
+    id
+    lastName
+    role
+    token
+  }
+}
+
+mutation DeleteConsult($input: DeleteConsultInput!) {
+  deleteConsult(input: $input) {
+    id
+  }
+}
+
+mutation DeleteHospital($input: DeleteHospitalInput!) {
+  deleteHospital(input: $input) {
+    id
+  }
+}
+mutation DeleteSupervisor($input: DeleteSupervisorInput!) {
+  deleteSupervisor(input: $input) {
+    id
+  }
+}
+mutation DeleteProcedure($input: DeleteProcedureInput!) {
+  deleteProcedure(input: $input) {
+    id
+  }
+}
+
+mutation DeleteRotation($input: DeleteRotationInput!) {
+  deleteRotation(input: $input) {
+    id
+  }
+}
+mutation DeleteProcedureType($input: DeleteProcedureTypeInput!) {
+  deleteProcedureType(input: $input) {
+    id
+  }
+}
+
+mutation DeleteUser($input: DeleteUserInput!) {
+  deleteUser(input: $input) {
+    id
+  }
+}
+
+mutation ImageUpload($input: ImageUploadInput!) {
+  imageUpload(input: $input) {
+    name
+    urn
+    dateOfBirth
+  }
+}
